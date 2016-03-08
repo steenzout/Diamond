@@ -53,6 +53,8 @@ addons:
       - cdbs
       - devscripts
       - libsensors4
+      - pbuilder
+      - python-configobj
       - python-mock
       - python-support
 
