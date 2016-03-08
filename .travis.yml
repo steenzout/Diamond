@@ -8,8 +8,14 @@ python:
   - "2.7"
 
 cache:
+  apt: true
   directories:
     - $HOME/.cache/pip
+
+addons:
+  apt:
+    packages:
+      - devscripts
 
 # command to install dependencies, e.g. pip install -r requirements.txt
 install:
