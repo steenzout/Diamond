@@ -11,11 +11,6 @@ cache:
   apt: true
   pip: true
 
-addons:
-  apt:
-    packages:
-      - devscripts
-
 # command to install dependencies, e.g. pip install -r requirements.txt
 install:
     - pip install -r .travis.requirements.txt
@@ -54,5 +49,8 @@ notifications:
     on_failure: always
 
 addons:
-    apt_packages:
-    - libsensors4
+  apt:
+    packages:
+      - devscripts
+      - libsensors4
+
