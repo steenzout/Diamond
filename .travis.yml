@@ -26,6 +26,20 @@ script:
 after_success:
     coveralls
 
+before_deploy:
+  - make deb
+  - make rpm
+
+deploy:
+  provider: releases
+  api-key: "GITHUB OAUTH TOKEN"
+  file:
+    - '*.deb'
+    - '*.rpm'
+  skip_cleanup: true
+  on:
+    tags: true
+
 notifications:
   email:
     recipients:
